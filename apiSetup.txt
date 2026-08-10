@@ -1,0 +1,16 @@
+To start the server 
+	fastapi dev main.py
+
+Use Postman:
+	url http://127.0.0.1:8000/posts the POST use json.Modify the automatically generated JSON payload in the request body:json
+{
+  "id": "101",
+  "content": "FastAPI handles data modeling effortlessly using Pydantic.",
+  "published": true,
+  "status": "registered"
+}
+
+Get:
+	http://127.0.0.1:8000/about
+	http://127.0.0.1:8000/PLCSim/101?q=somedata
+		check the print in the console & the return.
