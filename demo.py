@@ -25,10 +25,22 @@ def test1():
   counter = count_to(3)
   for number in counter:
     print(number)
+  #using iter
   #read the file and display if error
   for line in read_file('C:\\Work\\global-python\\apiSetup.txt'):
     if "ERROR" in line:
       print(line)
 
-print('Test 2:', len(test2()))
+t2 = test2()
+print('Test 2:', len(t2))
+myit = iter(t2)
+print(next(myit))
+print(next(myit))
+print(next(myit))
+#expect error
+try:
+  print(next(myit))
+except:
+  print('expect iteration error')
+  
 test1()
